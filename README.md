@@ -52,7 +52,8 @@ qAUC, qAUC为不同query下的AUC的平均值，计算如下：
 训练用于ESIM的fasttext词向量，8kw训练集与1亿最终测试集作为数据集，min_count=4, size=150，未对句子进行去重。
 
 #### lgb_model.ipynb
-训练lgb，A榜0.595266采用了40维向量，线下loss为0.435457左右（后两位不记得了）。包括统计特征，频率特征，nlp特征，jaccard、levenshtein、fuzzywuzzy距离度量特征等，特征都比较普通。最终成绩中采用了约50维特征，线下的loss为0.435312。lightgbm中num_leaves=127。
+训练lgb，A榜0.595266采用了40维向量，线下loss为0.435457左右（后两位不记得了）。包括统计特征，频率特征，nlp特征，jaccard、levenshtein、fuzzywuzzy距离度量特征等，特征都比较普通。最终成绩中采用了约50维特征，线下的loss为0.435312。lightgbm使用的sklearn中的接口，num_leaves=127。
+longest_common_subsequence相关特征两层for循环，nlp特征需要取词等，单进程构造特征特别慢，在程序中使用多进程处理。
 
 #### esim_pytorch.ipynb
 训练ESIM，纯nn模型，8kw训练集在A榜上能够取得0.588336的成绩，在最终测试集的效果应该更好，因为A榜训练集并没有作为我们训练词向量的数据集来源。Embedding层使用word2vec+fasttext拼接而成的词向量，即每个词对应300维，在训练过程中进行微调。

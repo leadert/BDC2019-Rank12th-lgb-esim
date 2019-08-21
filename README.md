@@ -4,7 +4,7 @@
 
 比赛链接：[2019中国高校计算机大赛--大数据挑战赛](https://www.kesci.com/home/competition/5cc51043f71088002c5b8840  "悬停显示文字")
 ## 正式赛题--文本点击率预估（5月26日开赛）
-搜索中一个重要的任务是根据query和title预测query下doc点击率。
+根据query和title预测query下doc点击率。
 
 ### 比赛数据
 #### sample 样本格式

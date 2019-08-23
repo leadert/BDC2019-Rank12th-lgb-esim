@@ -1,4 +1,4 @@
-# 2019-lightgbm-esim-pytorch
+# BDC2019-Rank12th-lgb-esim
 2019中国高校计算机大赛--大数据挑战赛Rank 12（福建大三本）-Solutions \
 初赛Rank 34(lgb)，复赛A榜Rank 17，B榜Rank 12，score=0.63834
 
